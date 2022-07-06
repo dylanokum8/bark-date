@@ -3,7 +3,8 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const passport = require('passport');
+const PORT = process.env.PORT || 3006;
 const sequelize = require('./config/connection');
 
 
