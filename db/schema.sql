@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS barkdate_db;
+
+CREATE DATABASE barkdate_db;
