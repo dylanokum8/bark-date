@@ -23,7 +23,7 @@
 // module.exports = { User, Post, Comment };
 //=================================================
 
-//import all modelx
+//import all models
 const Owner = require("./Owner");
 const Dog = require("./Dog");
 
