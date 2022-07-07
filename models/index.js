@@ -26,3 +26,19 @@
 
 // module.exports = { User, Post, Comment };
 //=================================================
+
+//import all models
+const Owner = require("./Owner");
+const Dog = require("./Dog");
+
+//create associations
+Owner.hasMany(Dog, {
+  foreignKey: "owner_id",
+});
+
+Dog.belongsTo(Owner, {
+  foreignKey: "owner_id",
+  onDelete: "SET NULL",
+});
+
+module.exports = (Owner, Dog);
