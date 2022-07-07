@@ -1,10 +1,14 @@
 Dog.init(
   {
-    dogname: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+    },
+    dogname: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     sex: {
       type: DataTypes.STRING,
