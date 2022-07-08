@@ -1,0 +1,11 @@
+* {
+    background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+form {
+    border: 5px solid black;
+    border-radius: 5px;
+}
