@@ -5,7 +5,7 @@ const ownerData = [
   {
     username: "A-Hask",
     firstname: "Arlene",
-    lastname: "Hask",
+    lastname: "Haskins",
     email: "arlene@email.com",
   },
   {
