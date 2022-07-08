@@ -31,7 +31,7 @@ Pictures.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'dogs',
+    modelName: 'pictures',
   }
 );
 
