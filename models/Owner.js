@@ -20,10 +20,9 @@ Owner.init(
       autoIncrement: true,
     },
     username: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      
     },
     firstname: {
       type: DataTypes.STRING,
