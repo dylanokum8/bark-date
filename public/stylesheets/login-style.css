@@ -3,6 +3,7 @@
     font-weight: bold;
 }
 
+
 body {
     background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
     background-repeat: no-repeat;
@@ -21,6 +22,7 @@ body {
     text-decoration: none;
 }
 
+/*removes link styling*/
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
@@ -33,6 +35,8 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+
+/*forms styling*/
 label {
     display: inline-block;
     width: 210px;
@@ -46,14 +50,11 @@ label {
     width: 50%;
 }
 
-/* .radio {
-  width: auto;
-} */
-
 .option{
     text-align: center;
 }
 
+/*button styling*/
 button {
     background-color: white;
     border-radius: 5px;
