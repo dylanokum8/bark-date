@@ -5,6 +5,7 @@
 {{/if}}
 <body>
 <form class="login-form">
+  <h4>Log in here</h4>
   <div>
     <label for="email-login">Email:</label>
     <input type="email" id="email-login" />
@@ -19,6 +20,7 @@
 </form>
 
 <form class="signup-form">
+<h4>Sign up here</h4>
   <p>Owner Info</p>
   <div>
     <label for="username-signup">Username:</label>
@@ -53,13 +55,17 @@
     <label for="dogweight-signup">Dog's Weight (in lbs):</label>
     <input type="text" id="dogweight-signup"/>
   </div>
-  <div>
-     <p>Dog's Sex:</p>
-      <input type="radio" id="male" name="fav_language" value="male">
-      <label for="male">Male</label><br>
-      <input type="radio" id="female" name="fav_language" value="female">
-      <label for="female">Female</label><br>
+  <div class="radio">
+     <p>Dog's Sex:
+      <br>
+      <label for="male">Male</label>
+      <input class="option" type="radio" id="male" name="fav_language" value="male">
+      <br>
+      <label for="female">Female</label>
+      <input class="option" type="radio" id="female" name="fav_language" value="female">
+      </p>
   </div>
+  <br>
   <div>
     <label for="password-signup">Password:</label>
     <input type="password" id="password-signup" />
