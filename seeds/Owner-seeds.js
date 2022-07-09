@@ -52,7 +52,7 @@ const ownerData = [
   },
 ];
 
-//can't bulk create. use await model.create
+//can't bulkCreate. use await model.create
 const seedOwners = () => Owner.bulkCreate(ownerData, { individualHooks: true });
 
 module.exports = seedOwners;

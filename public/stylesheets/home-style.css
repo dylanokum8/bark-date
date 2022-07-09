@@ -1,12 +1,4 @@
-/*aadjusts dalmation print background to fit page*/
+/*adjusts dalmation print background to fit page*/
 body {
     background-size: 90%;
-}
-
-h1 {
-    background-image: none;
-    background-color: rgb(255, 255, 255, .75);
-    width: 50%;
-    margin: auto;
-    text-align: center;
 }

@@ -34,11 +34,20 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+/* styles BarkDate link*/
+h1 {
+    background-image: none;
+    background-color: rgb(255, 255, 255, .75);
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
 /*button styling*/
 button {
     background-color: white;
     border-radius: 5px;
- }
+}
 
 footer { 
     background-image: none;
