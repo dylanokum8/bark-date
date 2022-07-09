@@ -1,11 +1,26 @@
-* {
+body {
     background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 60%;
+    background-color: black;
+}
+/* main { } */
+
+wrapper {
+background-image: none;
 }
 
-/* wrapper { } */
-/* btn { } */
-/* main { } */
-/* footer { } */
+button {
+    background-color: white;
+ }
+
+footer { 
+    background-image: none;
+    background-color: rgb(255, 255, 255, .75);
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    bottom: 0;
+}
