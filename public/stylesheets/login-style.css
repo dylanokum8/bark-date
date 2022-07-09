@@ -1,5 +1,6 @@
 * {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 body {
@@ -10,12 +11,26 @@ body {
     background-color: black;
 }
 
+/* fixes the login link to the top-left corner*/
+.sticky {
+    position: fixed;
+    top: 0;
+    background: black;
+    color: white;
+    width: auto;
+    text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
 .wrapper {
-    flex-wrap: wrap;
     display: inline-block;
     text-align: center;
     margin: auto;
     width: 100%;
+    text-decoration: none;
 }
 
 .login-form, .signup-form {
@@ -24,5 +39,9 @@ body {
     width: 30%;
     margin: auto;
     text-align: center;
-    font-weight: bold;
 }
+
+button {
+    background-color: white;
+    border-radius: 5px;
+ }
