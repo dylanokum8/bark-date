@@ -3,39 +3,6 @@
     font-weight: bold;
 }
 
-
-body {
-    background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%;
-    background-color: black;
-}
-
-/* fixes the login link to the top-left corner*/
-.sticky {
-    position: fixed;
-    top: 0;
-    background: black;
-    color: white;
-    width: auto;
-    text-decoration: none;
-}
-
-/*removes link styling*/
-a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
-}
-
-.wrapper {
-    display: inline-block;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    text-decoration: none;
-}
-
-
 /*forms styling*/
 label {
     display: inline-block;
@@ -54,8 +21,3 @@ label {
     text-align: center;
 }
 
-/*button styling*/
-button {
-    background-color: white;
-    border-radius: 5px;
- }

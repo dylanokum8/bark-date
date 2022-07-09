@@ -1,37 +1,6 @@
-* {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-}
-
-a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
-}
-
-
-.sticky {
-    position: fixed;
-    top: 0;
-    background: black;
-    color: white;
-    width: auto;
-}
-/*
-.wrapper {
-    flex-wrap: wrap;
-    display: inline-block;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    text-decoration: none;
-} */
-
-
+/*aadjusts dalmation print background to fit page*/
 body {
-    background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 90%;
-    background-color: black;
 }
 
 h1 {
@@ -40,12 +9,4 @@ h1 {
     width: 50%;
     margin: auto;
     text-align: center;
-}
-
-.wrapper {
-    flex-wrap: wrap;
-    display: inline-block;
-    text-align: center;
-    margin: auto;
-    width: 100%;
 }

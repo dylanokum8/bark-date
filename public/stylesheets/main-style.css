@@ -3,6 +3,15 @@
     font-weight: bold;
 }
 
+.wrapper {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    text-decoration: none;
+}
+
+/*adds dalmation print background to page*/
 body {
     background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
     background-repeat: no-repeat;
@@ -11,28 +20,24 @@ body {
     background-color: black;
 }
 
+/*sticks navbar to top left corner of page*/
+.sticky {
+    position: fixed;
+    top: 0;
+    background: black;
+    color: white;
+    width: auto;
+}
+
+/*removes link styling*/
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
-
-/* .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    border: 5px solid white;
-}
-
-.wrapper {
-    display: inline-block;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    text-decoration: none;
-} */
-
+/*button styling*/
 button {
     background-color: white;
+    border-radius: 5px;
  }
 
 footer { 
