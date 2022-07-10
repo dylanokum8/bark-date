@@ -12,6 +12,7 @@ Dog.init(
       primaryKey: true,
       autoIncrement: true,
     },
+  },
     
       // hooks: {
       //   // set up beforeCreate lifecycle "hook" functionality
@@ -28,6 +29,7 @@ Dog.init(
       //     return updatedDogData;
       //   },
       // },
+    {
       sequelize,
       timestamps: false,
       freezeTableName: true,
