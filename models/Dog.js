@@ -30,21 +30,21 @@ Dog.init(
       },
     },
     {
-      hooks: {
-        // set up beforeCreate lifecycle "hook" functionality
-        async beforeCreate(newDogData) {
-          newDogData.password = await bcrypt.hash(newDogData.password, 10);
-          return newDogData;
-        },
+      // hooks: {
+      //   // set up beforeCreate lifecycle "hook" functionality
+      //   async beforeCreate(newDogData) {
+      //     newDogData.password = await bcrypt.hash(newDogData.password, 10);
+      //     return newDogData;
+      //   },
   
-        async beforeUpdate(updatedDogData) {
-          updatedDogData.password = await bcrypt.hash(
-            updatedDogData.password,
-            10
-          );
-          return updatedDogData;
-        },
-      },
+      //   async beforeUpdate(updatedDogData) {
+      //     updatedDogData.password = await bcrypt.hash(
+      //       updatedDogData.password,
+      //       10
+      //     );
+      //     return updatedDogData;
+      //   },
+      // },
       sequelize,
       timestamps: false,
       freezeTableName: true,
