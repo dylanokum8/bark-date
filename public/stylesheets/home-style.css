@@ -1,6 +1,4 @@
-* {
-    background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}   
+/*adjusts dalmation print background to fit page*/
+body {
+    background-size: 90%;
+}

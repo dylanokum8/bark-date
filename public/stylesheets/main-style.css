@@ -1,11 +1,60 @@
 * {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.wrapper {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    text-decoration: none;
+}
+
+/*adds dalmation print background to page*/
+body {
     background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 60%;
+    background-color: black;
 }
 
-/* wrapper { } */
-/* btn { } */
-/* main { } */
-/* footer { } */
+/*sticks navbar to top left corner of page*/
+.sticky {
+    position: fixed;
+    top: 0;
+    background: black;
+    color: white;
+    width: auto;
+}
+
+/*removes link styling*/
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/* styles BarkDate link*/
+h1 {
+    background-image: none;
+    background-color: rgb(255, 255, 255, .75);
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+/*button styling*/
+button {
+    background-color: white;
+    border-radius: 5px;
+}
+
+footer { 
+    background-image: none;
+    background-color: rgb(255, 255, 255, .75);
+    width: 25%;
+    margin: auto;
+    margin-bottom: 0;
+    text-align: center;
+    bottom: 0;
+}

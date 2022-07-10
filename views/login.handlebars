@@ -4,6 +4,7 @@
 {{/each}}
 {{/if}} --}}
 <form class="login-form">
+  <h4>Log in here</h4>
   <div>
     <label for="email-login">Email:</label>
     <input type="email" id="email-login" />
@@ -18,6 +19,8 @@
 </form>
 
 <form class="signup-form">
+<h4>Sign up here</h4>
+  <p>Owner Info</p>
   <div>
     <label for="username-signup">Username:</label>
     <input type="text" id="username-signup" />
@@ -38,6 +41,7 @@
     <label for="phone-signup">Phone Number:</label>
     <input type="text" id="phone-signup" />
   </div>
+  <p>Dog Info</p>
   <div>
     <label for="dogname-signup">Dog's Name:</label>
     <input type="text" id="dogname-signup" />
@@ -47,14 +51,20 @@
     <input type="text" id="dogbreed-signup" />
   </div>
   <div>
-    <label for="dogweight-signup">Dog Weight (in lbs):</label>
-    <input type="text" id="dogweight-signup" />
+    <label for="dogweight-signup">Dog's Weight (in lbs):</label>
+    <input type="text" id="dogweight-signup"/>
   </div>
-  <div>
-    {{!-- change to radio button. Choices: Male or Female --}}
-    <label for="dogsex-signup">Dog's Sex:</label>
-    <input type="text" id="dogsex-signup" />
+  <div class="radio">
+     <p>Dog's Sex:
+      <br>
+      <label for="male">Male</label>
+      <input class="option" type="radio" id="male" name="fav_language" value="male">
+      <br>
+      <label for="female">Female</label>
+      <input class="option" type="radio" id="female" name="fav_language" value="female">
+      </p>
   </div>
+  <br>
   <div>
     <label for="password-signup">Password:</label>
     <input type="password" id="password-signup" />
@@ -63,7 +73,8 @@
     <button type="submit">Signup</button>
   </div>
 </form>
+</body>
 
 <script src="/javascript/login.js"></script>
-<link rel="icon" href="../public/stylesheets/assets/images/dog-tag-icon.png">
+<link rel="icon" type='image/png' href="../public/stylesheets/assets/images/dog-tag-icon.png">
 <link rel="stylesheet" href="/stylesheets/login-style.css">

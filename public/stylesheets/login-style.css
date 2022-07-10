@@ -1,10 +1,23 @@
 * {
-    background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
-.login-form {
-    border: 5px solid black;
+/*forms styling*/
+label {
+    display: inline-block;
+    width: 210px;
+    text-align: right;
 }
+
+.login-form, .signup-form {
+    background-image: none;
+    background-color: rgb(255, 255, 255, .75);
+    margin: auto;
+    width: 50%;
+}
+
+.option {
+    text-align: center;
+}
+
