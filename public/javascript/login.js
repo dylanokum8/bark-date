@@ -5,7 +5,7 @@ const loginFormHandler = async (event) => {
     const password = document.querySelector('#password-login').value.trim();
   
     if (email && password) {
-      const response = await fetch('/api/users/login', {
+      const response = await fetch('/login', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
@@ -25,11 +25,17 @@ const loginFormHandler = async (event) => {
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+    const firstname = document.querySelector('#firstname-signup').value.trim();
+    const lastname = document.querySelector('#lastname-signup').value.trim();
+    const phonenumber = document.querySelector('#phone-signup').value.trim();
+    const dogname = document.querySelector('#dogname-signup').value.trim();
+    const dogbreed = document.querySelector('#dogbreed-signup').value.trim();
+    const dogweight = document.querySelector('#dogweight-signup').value.trim();
   
-    if (username && email && password) {
-      const response = await fetch('/api/users', {
+    if (username && firstname && lastname && email && phonenumber && password && dogname && dogbreed && dogweight) {
+      const response = await fetch('/signup', {
         method: 'POST',
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ username, firstname, lastname, email, phonenumber, password, dogname, dogbreed, dogweight }),
         headers: { 'Content-Type': 'application/json' },
       });
   
