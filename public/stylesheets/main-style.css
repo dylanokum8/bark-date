@@ -16,8 +16,7 @@ body {
     background-image: url('../stylesheets/assets/images/Dalmation-print.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 60%;
-    background-color: black;
+    background-size: cover;
 }
 
 /*sticks navbar to top left corner of page*/
@@ -30,8 +29,9 @@ body {
 }
 
 /*removes link styling*/
-a:link, a:visited, a:hover, a:active {
+a, a:visited, a:hover, a:active {
     text-decoration: none;
+    color: inherit;
 }
 
 /* styles BarkDate link*/
