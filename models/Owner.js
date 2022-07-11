@@ -48,6 +48,10 @@ Owner.init(
         len: [4],
       },
     },
+    phonenumnber: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     hooks: {

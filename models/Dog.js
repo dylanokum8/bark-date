@@ -12,6 +12,30 @@ Dog.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    weight: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    sex: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    owner_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'owner',
+        key: 'id',
+      },
+    },
   },
 
   // hooks: {

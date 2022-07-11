@@ -37,8 +37,8 @@ Owner.hasMany(Dog, {
 });
 
 Dog.belongsTo(Owner, {
-  foreignKey: "owner_id",
-  onDelete: "SET NULL",
+  foreignKey: "id",
+  onDelete: "CASCADE",
 });
 
 module.exports = (Owner, Dog);

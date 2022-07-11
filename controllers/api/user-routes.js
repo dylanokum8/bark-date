@@ -1,26 +1,39 @@
 const router = require('express').Router();
 const { Owner } = require('../../models');
+const Dog = require('../../models/Dog');
 
-// CREATE new user
-// router.post('/', async (req, res) => {
-//   try {
-//     const dbOwnerData = await Owner.create({
-//       username: req.body.username,
-//       email: req.body.email,
-//       password: req.body.password,
-//     });
+//CREATE new user
+router.post('/', async (req, res) => {
+    const { username, firstname, lastname, email, phonenumber, password, dogname, dogbreed, dogweight, sex } = req.body
+  try {
+    const dbOwnerData = await Owner.create({
+      username,
+      email,
+      password,
+      firstname,
+      lastname,
+      phonenumber
+    });
 
-//     // Set up sessions with a 'loggedIn' variable set to `true`
-//     req.session.save(() => {
-//       req.session.loggedIn = true;
+    const dbDogData = await Dog.create({
+        name,
+        breed,
+        weight,
+        sex,
+       owner_id: dbOwnerData.id,
+    });
 
-//       res.status(200).json(dbOwnerData);
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
+    // Set up sessions with a 'loggedIn' variable set to `true`
+    req.session.save(() => {
+      req.session.loggedIn = true;
+
+      res.status(200).json({dbOwnerData, dbDogData});
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 // // Login
 // router.post('/login', async (req, res) => {

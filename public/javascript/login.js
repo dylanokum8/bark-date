@@ -21,7 +21,7 @@ const loginFormHandler = async (event) => {
   
   const signupFormHandler = async (event) => {
     event.preventDefault();
-  
+  console.log('signup');
     const username = document.querySelector('#username-signup').value.trim();
     const firstname = document.querySelector('#firstname-signup').value.trim();
     const lastname = document.querySelector('#lastname-signup').value.trim();
@@ -32,13 +32,14 @@ const loginFormHandler = async (event) => {
     const dogname = document.querySelector('#dogname-signup').value.trim();
     const dogbreed = document.querySelector('#dogbreed-signup').value.trim();
     const dogweight = document.querySelector('#dogweight-signup').value.trim();
-    const male = document.querySelector('#male-signup').value.trim();
-    const female = document.querySelector('#female-signup').value.trim();
-  
-    if (username && firstname && lastname && email && phonenumber && password && dogname && dogbreed && dogweight && male && female) {
-      const response = await fetch('/', {
+    const male = document.querySelector('#male')
+    const female = document.querySelector('#female')?.value.trim();
+    const sex = male.checked ? 'male' : 'female'
+
+    if (username && firstname && lastname && email && phonenumber && password && dogname && dogbreed && dogweight && sex ){
+      const response = await fetch('/api/users', {
         method: 'POST',
-        body: JSON.stringify({ username, firstname, lastname, email, phonenumber, password, dogname, dogbreed, dogweight, male, female }),
+        body: JSON.stringify({ username, firstname, lastname, email, phonenumber, password, dogname, dogbreed, dogweight, sex }),
         headers: { 'Content-Type': 'application/json' },
       });
   
@@ -47,14 +48,14 @@ const loginFormHandler = async (event) => {
       } else {
         alert('Failed to sign up.');
       }
-    }
+    } else {alert ('please fill out all fields')};
   };
   
   document
     .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+    ?.addEventListener('submit', loginFormHandler);
   
   document
     .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
+    ?.addEventListener('submit', signupFormHandler);
   
