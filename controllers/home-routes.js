@@ -19,6 +19,11 @@ router.get("/signup", (req, res) => {
     res.render("signup")
 });
 
+//dashboard
+router.get('/dashboard', (req,res) => {
+  res.render('dashboard')
+});
+
 //profile page
 router.get("/profile", (req, res) => {
   res.render("profile")
