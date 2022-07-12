@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-const bcrypt = require("bcrypt");
 
 class Dog extends Model {}
 
@@ -32,27 +31,11 @@ Dog.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'owner',
-        key: 'id',
+        model: "owner",
+        key: "id",
       },
     },
   },
-
-  // hooks: {
-  //   // set up beforeCreate lifecycle "hook" functionality
-  //   async beforeCreate(newDogData) {
-  //     newDogData.password = await bcrypt.hash(newDogData.password, 10);
-  //     return newDogData;
-  //   },
-
-  //   async beforeUpdate(updatedDogData) {
-  //     updatedDogData.password = await bcrypt.hash(
-  //       updatedDogData.password,
-  //       10
-  //     );
-  //     return updatedDogData;
-  //   },
-  // },
   {
     sequelize,
     timestamps: false,

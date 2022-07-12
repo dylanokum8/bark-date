@@ -22,7 +22,6 @@ Owner.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      
     },
     firstname: {
       type: DataTypes.STRING,
@@ -73,7 +72,7 @@ Owner.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "owner",
+    modelName: "Owner",
   }
 );
 

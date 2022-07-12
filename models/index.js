@@ -1,35 +1,8 @@
-
-
-
-
-//=================================================
-//EXAMPLE CODE
-// // import all models
-// const Post = require("./Post");
-// const User = require("./User");
-// const Comment = require("./Comment");
-
-// // create associations
-// Post.hasMany(Comment, {
-//   foreignKey: "post_id",
-// });
-
-// Post.belongsTo(User, {
-//   foreignKey: "user_id",
-//   onDelete: "SET NULL",
-// });
-
-// Comment.belongsTo(User, {
-//   foreignKey: "user_id",
-//   onDelete: "SET NULL",
-// });
-
-// module.exports = { User, Post, Comment };
-//=================================================
-
 //import all models
 const Owner = require("./Owner");
 const Dog = require("./Dog");
+const Post = require("./Post");
+const Comment = require("./Comment");
 
 //create associations
 Owner.hasMany(Dog, {
@@ -41,4 +14,18 @@ Dog.belongsTo(Owner, {
   onDelete: "CASCADE",
 });
 
-module.exports = {Owner, Dog};
+Post.hasMany(Comment, {
+  foreignKey: "post_id",
+});
+
+Post.belongsTo(Owner, {
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
+});
+
+Comment.belongsTo(Owner, {
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
+});
+
+module.exports = { Owner, Dog, Post, Comment };
