@@ -8,12 +8,14 @@ const ownerData = [
     lastname: "Haskins",
     email: "arlene@email.com",
     password: "arlene1",
+    phonenumber: 1111111111,
   },
   {
     username: "reesewitherspoon",
     firstname: "Reese",
     lastname: "Witherspoon",
     email: "reese@email.com",
+    phonenumber: 2222222222,
   },
   {
     username: "parishilton",
@@ -21,6 +23,7 @@ const ownerData = [
     lastname: "Hilton",
     email: "paris@email.com",
     password: "paris1",
+    phonenumber: 3333333333,
   },
   {
     username: "demilovato",
@@ -28,6 +31,7 @@ const ownerData = [
     lastname: "Lovato",
     email: "demi@email.com",
     password: "demi1",
+    phonenumber: 4444444444,
   },
   {
     username: "barackobama",
@@ -35,6 +39,7 @@ const ownerData = [
     lastname: "Obama",
     email: "barack@email.com",
     password: "barack1",
+    phonenumber: 5555555555,
   },
   {
     username: "chrisevans",
@@ -42,6 +47,7 @@ const ownerData = [
     lastname: "Evans",
     email: "chris@email.com",
     password: "chris1",
+    phonenumber: 6666666666,
   },
   {
     username: "tomholland",
@@ -49,6 +55,7 @@ const ownerData = [
     lastname: "Holland",
     email: "tom@email.com",
     password: "tom1",
+    phonenumber: 7777777777,
   },
 ];
 
