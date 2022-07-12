@@ -7,15 +7,21 @@
   <title>BarkDate</title>
   <nav class="sticky">
     {{#if loggedIn}}
-    <a href="/">Dashboard</a>
-    <button id="logout" class="btn">Logout</button>
+    <a href="/dashboard">Dashboard</a>
+    <a>|</a>
+    <a href="/profile">Profile Page</a>
+    <a>|</a>
+    <button id="logout" class="button">Logout</button>
+    
     {{else}}
     <a href="/login">LOGIN</a>
-    {{/if}}
+    <a>|</a>
     <a href="/signup">SIGNUP</a>
+    {{/if}}
+  
   </nav>
 <link rel="icon" type='image/png' href="../public/stylesheets/assets/images/dog-tag-icon.png">
-  <link rel="stylesheet" href="/stylesheets/main-style.css">
+<link rel="stylesheet" href="/stylesheets/main-style.css">
 </head>
 
 <body>
@@ -37,5 +43,5 @@
   <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>
-
+<script src="/javascript/profile.js"></script>
 </html>

@@ -11,7 +11,7 @@ label {
 }
 
 
-.login-form, .signup-form {
+.login-form, .signup-form, .new-post-form, .profile {
     background-image: none;
     background-color: rgb(255, 255, 255, .75);
     margin: auto;
