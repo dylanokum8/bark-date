@@ -17,6 +17,13 @@ router.get("/login", (req, res) => {
 //sign up page
 router.get("/signup", (req, res) => {
     res.render("signup")
-})
+});
+
+//profile page
+router.get("/profile", (req, res) => {
+  res.render("profile", {
+    
+  })
+});
 
 module.exports = router;
