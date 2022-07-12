@@ -1,53 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container profile-container">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Page</title>
+  <div class="row justify-content-center">
+    <div class="col-12">
+
+      <div class="row mb-5">
+        <div class="col-12 col-md-3 col-sm-12 mr-3 p-3">
+          <div class="row d-flex align-content-center info p-3">
+            <div class="col-12 mb-3 d-flex justify-content-center">
+              <h2>Profile Page {{owner.username}}</h2>
+            </div>
+            <div class="col-12 mb-3 d-flex justify-content-center">
+              <h2>My Info {{owner.firstname}} {{owner.lastname}}</h2>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <h4>Phone Number {{owner.phonenumber}}</h4>
+            </div>
+
+            <div class="col-12 d-flex justify-content-center">
+              <h4>{{owner.email}}</h4>
+            </div>
 
 
-</head>
 
-<body>
-  <main class="grid-container">
-    {{!-- User Info --}}
-  <div id="profile-info" class="grid-x result-row">
-    <div class="small-10 large-3 result-cell cell">
-      <p id="username"></p>
-    </div>
-    <div class="small-10 large-3 result-cell cell">
-      <p id="full-name"></p>
-    </div>
-    <div class="small-10 large-3 result-cell cell">
-      <p id="email"></p>
-    </div>
-    <div class="small-10 large-3 result-cell cell">
-      <p id="phone-number"></p>
-    </div>
-  </div>
+          </div>
 
-  {{!-- Dog Info --}}
-<div id="dog-info" class="grid-x result-row">
-    <div class="small-10 large-3 result-cell cell">
-      <p id="dog-name"></p>
-    </div>
-    <div class="small-10 large-3 result-cell cell">
-      <p id="dog-breed"></p>
-    </div>
-    <div class="small-10 large-3 result-cell cell">
-      <p id="dog-weight"></p>
-    </div>
-    <div class="small-10 large-3 result-cell cell">
-      <p id="dog-sex"></p>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+<div class="container dog-container">
+
+  <div class="row justify-content-center">
+    <div class="col-12">
+
+      <div class="row mb-5">
+        <div class="col-12 col-md-3 col-sm-12 mr-3 p-3">
+          <div class="row d-flex align-content-center info p-3">
+            <div class="col-12 mb-3 d-flex justify-content-center">
+              <h3> {{dog.dogname}}</h2>
+            </div>
+            <div class="col-12 mb-3 d-flex justify-content-center">
+              <h4>Dog Breed: {{dog.dogbreed}}</h4>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <h4>Dog Weight: {{dog.dogweight}}</h4>
+            </div>
+
+            <div class="col-12 d-flex justify-content-center">
+              <h4>{{dog.sex}}</h4>
+            </div>
 
 
-  </main>
 
+          </div>
 
-
-</body>
-
-</html>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
