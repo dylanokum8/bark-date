@@ -41,4 +41,4 @@ Dog.belongsTo(Owner, {
   onDelete: "CASCADE",
 });
 
-module.exports = (Owner, Dog);
+module.exports = {Owner, Dog};

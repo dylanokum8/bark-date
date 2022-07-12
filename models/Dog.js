@@ -12,15 +12,15 @@ Dog.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    dogname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    breed: {
+    dogbreed: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    weight: {
+    dogweight: {
       type: DataTypes.STRING,
       allowNull: false,
     },

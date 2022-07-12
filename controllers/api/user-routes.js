@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const { Owner } = require('../../models');
+const Owner = require('../../models/Owner');
 const Dog = require('../../models/Dog');
 
 //CREATE new user
 router.post('/', async (req, res) => {
+    console.log(req.body);
     const { username, firstname, lastname, email, phonenumber, password, dogname, dogbreed, dogweight, sex } = req.body
   try {
     const dbOwnerData = await Owner.create({
@@ -16,9 +17,9 @@ router.post('/', async (req, res) => {
     });
 
     const dbDogData = await Dog.create({
-        name,
-        breed,
-        weight,
+        dogname,
+        dogbreed,
+        dogweight,
         sex,
        owner_id: dbOwnerData.id,
     });
@@ -35,55 +36,55 @@ router.post('/', async (req, res) => {
   }
 });
 
-// // Login
-// router.post('/login', async (req, res) => {
-//   try {
-//     const dbOwnerData = await Owner.findOne({
-//       where: {
-//         email: req.body.email,
-//       },
-//     });
+// Login
+router.post('/login', async (req, res) => {
+  try {
+    const dbOwnerData = await Owner.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
 
-//     if (!dbOwnerData) {
-//       res
-//         .status(400)
-//         .json({ message: 'Incorrect email or password. Please try again!' });
-//       return;
-//     }
+    if (!dbOwnerData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password. Please try again!' });
+      return;
+    }
 
-//     const validPassword = await dbOwnerData.checkPassword(req.body.password);
+    const validPassword = await dbOwnerData.checkPassword(req.body.password);
 
-//     if (!validPassword) {
-//       res
-//         .status(400)
-//         .json({ message: 'Incorrect email or password. Please try again!' });
-//       return;
-//     }
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password. Please try again!' });
+      return;
+    }
 
-//     // Once the user successfully logs in, set up the sessions variable 'loggedIn'
-//     req.session.save(() => {
-//       req.session.loggedIn = true;
+    // Once the user successfully logs in, set up the sessions variable 'loggedIn'
+    req.session.save(() => {
+      req.session.loggedIn = true;
 
-//       res
-//         .status(200)
-//         .json({ user: dbOwnerData, message: 'You are now logged in!' });
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// });
+      res
+        .status(200)
+        .json({ user: dbOwnerData, message: 'You are now logged in!' });
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
-// // Logout
-// router.post('/logout', (req, res) => {
-//   // When the user logs out, destroy the session
-//   if (req.session.loggedIn) {
-//     req.session.destroy(() => {
-//       res.status(204).end();
-//     });
-//   } else {
-//     res.status(404).end();
-//   }
-// });
+// Logout
+router.post('/logout', (req, res) => {
+  // When the user logs out, destroy the session
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
 module.exports = router;

@@ -48,7 +48,7 @@ Owner.init(
         len: [4],
       },
     },
-    phonenumnber: {
+    phonenumber: {
       type: DataTypes.STRING,
       allowNull: false,
     },
