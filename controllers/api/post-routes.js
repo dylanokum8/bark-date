@@ -3,11 +3,22 @@ const sequelize = require("../../config/connection");
 const { Post, Owner, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-// get all users
+// get all owners
 router.get("/", (req, res) => {
   console.log("======================");
   Post.findAll({
-    attributes: ["id", "post_url", "title", "created_at"],
+    attributes: [
+      "id",
+      "post_url",
+      "title",
+      "created_at",
+      [
+        sequelize.literal(
+          "(SELECT COUNT(*) FROM post WHERE post.id = owner.post_id"
+        ),
+        "post_count",
+      ],
+    ],
     include: [
       {
         model: Comment,
@@ -35,7 +46,18 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "post_url", "title", "created_at"],
+    attributes: [
+      "id",
+      "post_url",
+      "title",
+      "created_at",
+      [
+        sequelize.literal(
+          "(SELECT COUNT(*) FROM post WHERE post.id = owner.post_id"
+        ),
+        "post_count",
+      ],
+    ],
     include: [
       {
         model: Comment,
