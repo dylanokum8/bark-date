@@ -1,21 +1,37 @@
-
+<head>
+    <nav class="sticky">
+    {{#if loggedIn}}
+    <a href="/dashboard">Dashboard</a>
+    <a>|</a>
+    <a href="/profile/{{user_id}}">Profile Page</a>
+    <a>|</a>
+    <button id="logout" class="button">Logout</button>
+    
+    {{else}}
+    <a href="/login">LOGIN</a>
+    <a>|</a>
+    <a href="/signup">SIGNUP</a>
+    {{/if}}
+  </nav>
+</head>
 <section class="dashboard">
-<section>
-  <h2>Create New Post</h2>
 
-  <form class="new-post-form">
-    <input type="hidden" value="{{owner_id}}" id="owner_id" name="owner_id" />
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-url">Info</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+  <section>
+    <h2>Create New Post</h2>
+
+    <form class="new-post-form">
+      <input type="hidden" value="{{owner_id}}" id="owner_id" name="owner_id" />
+      <div>
+        <label for="post-title">Title</label>
+        <input type="text" id="post-title" name="post-title" />
+      </div>
+      <div>
+        <label for="post-url">Info</label>
+        <input id="post-url" name="post-url" />
+      </div>
+      <button type="submit" class="btn">Create</button>
+    </form>
+  </section>
 </section>
 
 {{#if posts.length}}
