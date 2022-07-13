@@ -10,8 +10,7 @@ label {
     text-align: right;
 }
 
-
-.login-form, .signup-form, .new-post-form, .profile {
+.login-form, .signup-form, .new-post-form, .profile, .post {
     background-image: none;
     background-color: rgb(255, 255, 255, .75);
     margin: auto;

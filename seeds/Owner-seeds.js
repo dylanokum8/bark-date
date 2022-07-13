@@ -60,9 +60,10 @@ const ownerData = [
   },
 ];
 
-const seedOwners = async () => Owner.bulkCreate(ownerData);
-
-// const seedOwners = async () =>
-//   await Owner.create("Owner", ownerData, { individualHooks: true });
+const seedOwners = async () => {
+  for (let i = 0; i < ownerData.length; i++) {
+    await Owner.create(ownerData[i]);
+  }
+};
 
 module.exports = seedOwners;

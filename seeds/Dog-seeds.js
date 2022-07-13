@@ -17,13 +17,6 @@ const dogData = [
     dogweight: "15",
   },
   {
-    dogname: "Major",
-    owner_id: 2,
-    sex: "male",
-    dogbreed: "lab",
-    dogweight: "50",
-  },
-  {
     dogname: "Tinkerbell",
     owner_id: 3,
     sex: "female",
@@ -36,13 +29,6 @@ const dogData = [
     sex: "female",
     dogbreed: "maltipoo",
     dogweight: "10",
-  },
-  {
-    dogname: "Batman",
-    owner_id: 4,
-    sex: "male",
-    dogbreed: "yorkipoo",
-    dogweight: "15",
   },
   {
     dogname: "Bo",
