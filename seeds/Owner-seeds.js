@@ -15,6 +15,7 @@ const ownerData = [
     firstname: "Reese",
     lastname: "Witherspoon",
     email: "reese@email.com",
+    password: "reese1",
     phonenumber: 2222222222,
   },
   {
@@ -59,7 +60,9 @@ const ownerData = [
   },
 ];
 
-const seedOwners = async () =>
-  await Owner.create("Owner", ownerData, { individualHooks: true });
+const seedOwners = async () => Owner.bulkCreate(ownerData);
+
+// const seedOwners = async () =>
+//   await Owner.create("Owner", ownerData, { individualHooks: true });
 
 module.exports = seedOwners;

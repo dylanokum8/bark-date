@@ -10,8 +10,12 @@ Owner.hasMany(Dog, {
 });
 
 Dog.belongsTo(Owner, {
-  foreignKey: "id",
+  foreignKey: "owner_id",
   onDelete: "CASCADE",
+});
+
+Owner.hasMany(Post, {
+  foreignKey: "owner_id",
 });
 
 Post.hasMany(Comment, {
