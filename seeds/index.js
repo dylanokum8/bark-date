@@ -13,6 +13,13 @@ const seedAll = async () => {
   await seedDogs();
   console.log("----------");
 
+  //commented out. No post or comment seeds yet
+  // await seedPosts();
+  // console.log("----------");
+
+  // await seedComments();
+  // console.log("----------");
+
   process.exit(0);
 };
 

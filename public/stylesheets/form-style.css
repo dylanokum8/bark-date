@@ -1,6 +1,7 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    list-style: none;
 }
 
 /*forms styling*/
@@ -10,11 +11,12 @@ label {
     text-align: right;
 }
 
-.login-form, .signup-form, .new-post-form, .profile, .post {
+.login-form, .signup-form, .new-post-form, .profile, .post, .edit, .edit-post-form, .comment-form, .dashboard, .all-posts, .owner-posts {
     background-image: none;
     background-color: rgb(255, 255, 255, .75);
     margin: auto;
     width: 50%;
+    text-align: center;
 }
 
 .option {

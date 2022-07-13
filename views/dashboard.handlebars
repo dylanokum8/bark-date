@@ -1,5 +1,5 @@
 
-
+<section class="dashboard">
 <section>
   <h2>Create New Post</h2>
 
@@ -16,9 +16,10 @@
     <button type="submit" class="btn">Create</button>
   </form>
 </section>
+</section>
 
 {{#if posts.length}}
-<section>
+<section class="all-posts">
   <h2>Your Posts</h2>
   <ol>
     {{#each posts as |post|}}
