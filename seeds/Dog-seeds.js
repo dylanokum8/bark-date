@@ -3,6 +3,13 @@ const { Owner, Dog } = require("../models");
 
 const dogData = [
   {
+    dogname: "Milo",
+    owner_id: 1,
+    sex: "male",
+    dogbreed: "huskymix",
+    dogweight: "60",
+  },
+  {
     dogname: "Minnie",
     owner_id: 2,
     sex: "female",

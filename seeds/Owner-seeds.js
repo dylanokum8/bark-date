@@ -3,6 +3,14 @@ const { Owner, Dog } = require("../models");
 
 const ownerData = [
   {
+    username: "A-Hask",
+    firstname: "Arlene",
+    lastname: "Haskins",
+    email: "arlene@email.com",
+    password: "arlene1",
+    phonenumber: 1111111111,
+  },
+  {
     username: "reesewitherspoon",
     firstname: "Reese",
     lastname: "Witherspoon",
