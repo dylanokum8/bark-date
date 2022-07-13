@@ -6,7 +6,14 @@ const withAuth = require("../utils/auth");
 //enter owner and dog info in profile page
 router.get("/:id", withAuth, (req, res) => {
   Owner.findByPk(req.params.id, {
+<<<<<<< HEAD
     // include: [Dog],
+=======
+    where: {
+      id: req.params.id,
+    },
+    include: [Dog],
+>>>>>>> feature/profileViews
   })
     .then((dbOwnerData) => {
       const owner = dbOwnerData.get({ plain: true });
