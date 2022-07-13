@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BarkDate</title>
+  <link rel="icon" type='image/png' href="../../public/stylesheets/assets/images/dog-tag-icon.png">
   <nav class="sticky">
     {{#if loggedIn}}
     <a href="/dashboard">Dashboard</a>
@@ -18,10 +19,8 @@
     <a>|</a>
     <a href="/signup">SIGNUP</a>
     {{/if}}
-  
   </nav>
-<link rel="icon" type='image/png' href="../public/stylesheets/assets/images/dog-tag-icon.png">
-<link rel="stylesheet" href="/stylesheets/main-style.css">
+  <link rel="stylesheet" href="/stylesheets/main-style.css">
 </head>
 
 <body>
@@ -36,9 +35,9 @@
     </main>
   </div>
   
-    <footer>
-      Thanks for visiting!
-    </footer>
+  <footer>
+    Thanks for visiting!
+  </footer>
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
