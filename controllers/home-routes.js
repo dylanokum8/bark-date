@@ -1,14 +1,32 @@
 const router = require("express").Router();
+const { Post, Comment } = require('../models')
 
 // Import the custom middleware
 const withAuth = require("../utils/auth");
 
 //homepage
 router.get("/", async (req, res) => {
-  const loggedIn = req.session.loggedIn ? req.session.loggedIn : false;
-  const user_id = req.session.user_id;
-  res.render("home", { loggedIn, user_id });
+  Post.findAll({
+    include: [
+      {
+        model: Comment
+      }
+    ]
+  })
+  .then(postdata => {
+    let posts = postdata.map(post => {
+      return post.get({plain: true});
+    })
+    const loggedIn = req.session.loggedIn ? req.session.loggedIn : false;
+  const owner_id = req.session.owner_id;
+    res.render("home", { loggedIn, owner_id, posts });
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
+
 
 //login page
 router.get("/login", (req, res) => {
@@ -22,7 +40,26 @@ router.get("/signup", (req, res) => {
 
 //dashboard
 router.get("/dashboard", (req, res) => {
-  res.render("dashboard");
+  const loggedIn = req.session.loggedIn ? req.session.loggedIn : false;
+  const owner_id = req.session.owner_id;
+if (owner_id) {
+  Post.findAll({
+    where: {owner_id: owner_id}
+    // ,include: [
+    //   {
+    //     model: Comment
+    //   }
+    // ]
+  })
+  .then(postdata => {
+    let posts = postdata.map(post => {
+      return post.get({plain: true});
+    })
+    res.render("dashboard", { loggedIn, owner_id, posts });
+  })
+} else {
+  res.render("dashboard", { loggedIn, owner_id });
+}
 });
 
 //profile page

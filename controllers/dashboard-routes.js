@@ -9,13 +9,13 @@ router.get("/", withAuth, (req, res) => {
   console.log("======================");
   Post.findAll({
     where: {
-      user_id: req.session.user_id,
+      owner_id: req.session.owner_id,
     },
     attributes: ["id", "post_url", "title"],
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id"],
+        attributes: ["id", "comment_text", "post_id", "owner_id"],
         include: {
           model: Owner,
           attributes: ["username"],
@@ -43,7 +43,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id"],
+        attributes: ["id", "comment_text", "post_id", "owner_id"],
         include: {
           model: Owner,
           attributes: ["username"],
