@@ -1,5 +1,19 @@
 <header>
     <h1>Welcome to the Homepage</h1>
+{{#if posts.length}}
+<section>
+  <h2> Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+
     <link rel="stylesheet" href="/stylesheets/home-style.css">
     <link rel="icon" type='image/png' href="../public/stylesheets/assets/images/dog-tag-icon.png">
 </header>
