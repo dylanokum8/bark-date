@@ -50,6 +50,10 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 footer { 
     background-image: none;
     background-color: rgb(255, 255, 255, .75);
