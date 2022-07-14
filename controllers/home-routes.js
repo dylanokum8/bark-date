@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Post, Comment } = require('../models')
+const { Post, Comment } = require("../models");
 
 // Import the custom middleware
 const withAuth = require("../utils/auth");
@@ -9,24 +9,23 @@ router.get("/", async (req, res) => {
   Post.findAll({
     include: [
       {
-        model: Comment
-      }
-    ]
+        model: Comment,
+      },
+    ],
   })
-  .then(postdata => {
-    let posts = postdata.map(post => {
-      return post.get({plain: true});
+    .then((postdata) => {
+      let posts = postdata.map((post) => {
+        return post.get({ plain: true });
+      });
+      const loggedIn = req.session.loggedIn ? req.session.loggedIn : false;
+      const owner_id = req.session.owner_id;
+      res.render("home", { loggedIn, owner_id, posts });
     })
-    const loggedIn = req.session.loggedIn ? req.session.loggedIn : false;
-  const owner_id = req.session.owner_id;
-    res.render("home", { loggedIn, owner_id, posts });
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
-
 
 //login page
 router.get("/login", (req, res) => {
@@ -42,29 +41,29 @@ router.get("/signup", (req, res) => {
 router.get("/dashboard", (req, res) => {
   const loggedIn = req.session.loggedIn ? req.session.loggedIn : false;
   const owner_id = req.session.owner_id;
-if (owner_id) {
-  Post.findAll({
-    where: {owner_id: owner_id}
-    // ,include: [
-    //   {
-    //     model: Comment
-    //   }
-    // ]
-  })
-  .then(postdata => {
-    let posts = postdata.map(post => {
-      return post.get({plain: true});
-    })
-    res.render("dashboard", { loggedIn, owner_id, posts });
-  })
-} else {
-  res.render("dashboard", { loggedIn, owner_id });
-}
+  if (owner_id) {
+    Post.findAll({
+      where: { owner_id: owner_id },
+      // ,include: [
+      //   {
+      //     model: Comment
+      //   }
+      // ]
+    }).then((postdata) => {
+      let posts = postdata.map((post) => {
+        return post.get({ plain: true });
+      });
+      res.render("dashboard", { loggedIn, owner_id, posts });
+    });
+  } else {
+    res.render("dashboard", { loggedIn, owner_id });
+  }
 });
 
 //profile page
 router.get("/profile", (req, res) => {
-  res.render("profile");
+  const loggedIn = req.session.loggedIn;
+  res.render("profile", { loggedIn });
 });
 
 module.exports = router;
