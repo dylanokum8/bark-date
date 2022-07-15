@@ -27,6 +27,12 @@ body {
     background: black;
     color: white;
     width: auto;
+    padding: 5px;
+}
+
+.link {
+    border-right: 1px solid white;
+    padding-right: 2px;
 }
 
 /*removes link styling*/

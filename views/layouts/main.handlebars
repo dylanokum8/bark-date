@@ -5,6 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BarkDate</title>
+  <nav class="sticky">
+    {{#if loggedIn}}
+    <a class="link" href="/dashboard">Dashboard</a>
+    <a class="link" href="/profile/{{owner_id}}">Profile Page</a>
+    <button id="logout" class="button">Logout</button>
+    
+    {{else}}
+    <a href="/login">LOGIN</a>
+    <a>|</a>
+    <a href="/signup">SIGNUP</a>
+    {{/if}}
+  </nav>
   <link rel="icon" type='image/png' href="../../public/stylesheets/assets/images/dog-tag-icon.png">
   <link rel="stylesheet" href="/stylesheets/main-style.css">
 </head>
@@ -28,6 +40,5 @@
   <script src="/javascript/logout.js"></script>
   
   {{/if}}
-  
 </body>
 </html>

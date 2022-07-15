@@ -14,8 +14,8 @@ router.get("/:id", withAuth, (req, res) => {
     .then((dbOwnerData) => {
       const owner = dbOwnerData.get({ plain: true });
       const loggedIn = req.session.loggedIn;
-      const owner_id = req.sesstion.owner_id;
-      res.render("profile", owner, { loggedIn, owner_id });
+      const owner_id = req.session.owner_id;
+      res.render("profile", { loggedIn, owner_id, owner });
       console.log("owner data has been passed through");
     })
     .catch((err) => {
