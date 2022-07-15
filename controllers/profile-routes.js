@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const sequelize = require("../config/connection");
 const { Owner, Dog } = require("../models");
 const withAuth = require("../utils/auth");
 
@@ -14,7 +13,10 @@ router.get("/:id", withAuth, (req, res) => {
   })
     .then((dbOwnerData) => {
       const owner = dbOwnerData.get({ plain: true });
-      res.render("profile", owner);
+      const loggedIn = req.session.loggedIn;
+      const owner_id = req.sesstion.owner_id;
+      res.render("profile", owner, { loggedIn, owner_id });
+      console.log("owner data has been passed through");
     })
     .catch((err) => {
       console.log(err);
