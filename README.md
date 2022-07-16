@@ -32,6 +32,8 @@ BarkDate is an app where a dog owner can easily plan meetups with other dog owne
 
 Clone the code from GitHub. Start MySQL and enter "source db/schema.sql" to create the database. Enter "use barkdate_db" to use the database. Start the server by entering "npm start" in the command line. Finally, go to the server in your browser, create an account and plan lots of doggy playdates!
 
+Or visit the app here: https://barkdate.herokuapp.com/
+
 ---
 
 ## Usage Information
