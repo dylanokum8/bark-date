@@ -12,6 +12,9 @@
 
 BarkDate is an app where a dog owner can easily plan meetups with other dog owners.
 
+![image](https://user-images.githubusercontent.com/93448964/185809316-a36aef2a-48c7-4ab5-a64f-b6710f6ae0e4.png)
+
+
 ---
 
 ## Table of Contents
